@@ -8,16 +8,14 @@ function agregar(string){
     
 }
 
-function finalizar(){
-
-    
+function finalizar(){    
     if(concatenado!=""){
         var split = concatenado.split(';');
-        var html=''
+        var str_html='<ol>'
         for (var i=0; i < split.length-1; i++) {
-            document.write('<li>'+split[i]+'</li>');
-         }
-         
-         document.getElementById('lista').outerHTML = '<h1>ASD</h1>';
-    
+            str_html+= '<li>'+split[i]+'</li>';
+         }         
+         str_html+='</ol>'
+         document.getElementById('lista').outerHTML = str_html;
+    }
 }
